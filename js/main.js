@@ -5,7 +5,27 @@ window.onscroll = () => {
     this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
 }
 
-// store product info in object
+// Navbar Toggler
+
+const navMenu = document.querySelector('.menu');
+navTogle = document.querySelector('.menu-btn');
+if (navTogle) {
+    navTogle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    })
+};
+
+// Closing menu when navlink is clicked
+
+const navLink = document.querySelectorAll('.nav-link');
+function linkAction() {
+    const navMenu = document.querySelector('.menu');
+    navMenu.classList.remove('active');
+};
+navLink.forEach(n => n.addEventListener('click', linkAction));
+
+
+// Store product info in object
 
 var pic = document.querySelector('#main-shoe');
 var blue = document.querySelector('.blue');
@@ -37,7 +57,7 @@ var info = [
     }
 ];
 
-// change color
+// Change color
 
 blue.addEventListener('click', function() {
     pic.src = info[0].src;
