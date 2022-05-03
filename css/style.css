@@ -357,8 +357,6 @@ img {
     flex: 0 0 50%;
     max-width: 50%;
     padding: 0 20px;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .about-img .img-box {
@@ -368,6 +366,7 @@ img {
 
 .about-img .img-box img {
     width: 100%;
+    transition: .5s;
 }
 
 .about-text .section-title {
@@ -406,6 +405,7 @@ img {
     border: 5px solid;
     cursor: pointer;
     margin: 0 10px;
+    transition: .5s;
 }
 
 .color.blue {
@@ -460,20 +460,22 @@ img {
     font-size: 24px;
     font-weight: 700;
     display: inline-block;
-    padding-right: 10px;
-    color: var(--black-100);
-    text-decoration: line-through;
+    color: #a800a0;
+    margin-right: 20px;
 }
 
 .price .old-price {
     font-size: 24px;
     font-weight: 700;
     display: inline-block;
-    color: #a800a0;
+    padding-right: 10px;
+    color: var(--black-100);
+    text-decoration: line-through;
 }
+    
 
 .configurate {
-    columns: #358ed7;
+    color: #358ed7;
     text-decoration: none;
     font-size: 14px;
     display: block;
