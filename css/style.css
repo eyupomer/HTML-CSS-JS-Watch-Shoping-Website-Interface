@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Kaushan+Script&family=Rubik:wght@400;500;600;700&family=Sorts+Mill+Goudy:ital@1&display=swap');
 :root{
-    --main-color:#a800a8
+    --main-color:#a800a8;
     --shadow-black-100:0 5px 15px rgba(0, 0, 0, 0.1);
     --black-900:#01010f;
     --black-400:#555;
@@ -87,7 +87,7 @@ img {
     display: inline-block;
     text-transform: uppercase;
     margin: 0 0 15px;
-    color: #a800a0;
+    color: var(--main-color);
     padding: 5px 10px;
     z-index: 1;
     position: relative;
@@ -100,7 +100,7 @@ img {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #a800a0;
+    background-color: var(--main-color);
     border-radius: 4px;
     z-index: -1;
     opacity: 0.1;
@@ -126,9 +126,9 @@ img {
 }
 
 .btn-1:hover {
-    border: 1px solid #a800a0;
+    border: 1px solid var(--main-color);
     background-color: transparent;
-    color: #a800a0;
+    color: var(--main-color);
 }
 
 .effect-wrap .effect {
@@ -139,7 +139,7 @@ img {
 .effect-1 {
     width: 30px;
     height: 30px;
-    border: 4px solid #a800a0;
+    border: 4px solid var(--main-color);
     right: 10%;
     bottom: 10%;
     animation: spin 10s linear infinite;
@@ -158,7 +158,7 @@ img {
 .effect-2 div {
     height: 3px;
     width: 3px;
-    background-color: #a800a0;
+    background-color: var(--main-color);
     margin: 0 3px 8px;
 }
 
@@ -194,7 +194,7 @@ img {
 
 .effect-4 div {
     width: 1px;
-    background-color: #a800a0;
+    background-color: var(--main-color);
 }
 
 @keyframes spin {
@@ -274,7 +274,7 @@ img {
 
 .menu-btn {
     color: var(--white);
-    background-color: #a800a8;
+    background-color: var(--main-color);
     height: 34px;
     width: 44px;
     padding: 0;
@@ -318,7 +318,7 @@ img {
 }
 
 .home-section .home-text h2 span {
-    color: #a800a8;
+    color: var(--main-color);
 }
 
 .home-section .home-text p {
@@ -409,13 +409,13 @@ img {
 }
 
 .color.blue {
-    background-color: #2175f5;
-    border-color: #2175f5;
+    background-color: #0000ff;
+    border-color: #0000ff;
 }
 
 .color.purple {
-    background-color: #a800a0;
-    border-color: #a800a0;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
 }
 
 .color.cyan {
@@ -429,13 +429,13 @@ img {
 }
 
 .color.green {
-    background-color: #29b864;
-    border-color: #29b864;
+    background-color: #00ff00;
+    border-color: #00ff00;
 }
 
 .color.red {
-    background-color: #f84848;
-    border-color: #f84848;
+    background-color: #ff0000;
+    border-color: #ff0000;
 }
 
 .color.active {
@@ -460,7 +460,7 @@ img {
     font-size: 24px;
     font-weight: 700;
     display: inline-block;
-    color: #a800a0;
+    color: var(--main-color);
     margin-right: 20px;
 }
 
@@ -480,4 +480,95 @@ img {
     font-size: 14px;
     display: block;
     margin-top: 40px;
+}
+
+/* --- Product Section --- */
+
+.product-item {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 20px;
+}
+
+.product-item .product-item-inner {
+    padding: 15px;
+    box-shadow: var(--shadow-black-100);
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100px;
+    padding-bottom: 20px;
+    transition: all .3s ease-in;
+}
+
+.card-name {
+    position: absolute;
+    left: -28%;
+    top: 0;
+    width: 3.2rem;
+    height: 100%;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black-100);
+    color: var(--white);
+    font-weight: bold;
+    transition: all .3s ease-in;
+}
+
+.card-icon {
+    font-size: 1.2rem;
+    color: var(--black-100);
+}
+
+.card-icon:hover {
+    color: var(--main-color);
+
+}
+
+.card-precis {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    transition: all .3s ease-in;
+}
+
+.card-preci {
+    display: block;
+    text-align: center;
+}
+
+.card-preci-before {
+    font-size: 0.70rem;
+    color: var(--main-color);
+    font-weight: bold;
+    margin-bottom: .25rem;
+}
+
+.card-preci-now {
+    font-size: .95rem;
+    font-weight: bold;
+    color: var(--black-100);
+}
+
+.product-item .product-item-inner:hover .card-name {
+    left: 0;
+}
+
+.product-item .product-item-inner:hover .card-img {
+    margin-left: 3rem;
+}
+
+.product-item .product-item-inner:hover .card-precis {
+    margin-left: 3rem;
+    padding: 0 1.5rem;
 }
