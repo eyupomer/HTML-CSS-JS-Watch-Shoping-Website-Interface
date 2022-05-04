@@ -296,6 +296,7 @@ img {
     font-size: 18px;
     display: none;
     box-shadow: var(--shadow-black-100);
+    cursor: pointer;
 }
 
 /* --- Home Section --- */
