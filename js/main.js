@@ -38,22 +38,22 @@ const colors = document.querySelectorAll('.color');
 
 var info = [
     {
-        src: "../images/blue.png"
+        src: "./images/blue.png"
     },
     {
-        src: "../images/purple.png"
+        src: "./images/purple.png"
     },
     {
-        src: "../images/cyan.png"
+        src: "./images/cyan.png"
     },
     {
-        src: "../images/pink.png"
+        src: "./images/pink.png"
     },
     {
-        src: "../images/green.png"
+        src: "./images/green.png"
     },
     {
-        src: "../images/red.png"
+        src: "./images/red.png"
     }
 ];
 
